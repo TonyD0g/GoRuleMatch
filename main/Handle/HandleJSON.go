@@ -2,18 +2,22 @@ package Handle
 
 import (
 	Format "GoRuleMatch/main/AllFormat"
+	"GoRuleMatch/main/Log"
 	"encoding/json"
-	"fmt"
-	"os"
+	"io/ioutil"
 )
 
 var pocStruct Format.PocStruct
 
 func TryToParsePocStruct(jsonData string) Format.PocStruct {
-	err := json.Unmarshal([]byte(jsonData), &pocStruct)
+	// 读取 JSON 文件内容
+	jsonDataBytes, err := ioutil.ReadFile(jsonData)
 	if err != nil {
-		fmt.Println("[-] Error unmarshal Json:", err)
-		os.Exit(1)
+		Log.Log.Fatal("[-] Error reading JSON file:", err)
+	}
+	err = json.Unmarshal(jsonDataBytes, &pocStruct)
+	if err != nil {
+		Log.Log.Fatal("[-] Error unmarshal Json:", err)
 	}
 	return pocStruct
 }

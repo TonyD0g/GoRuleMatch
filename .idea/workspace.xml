@@ -21,6 +21,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -39,18 +42,19 @@
     &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Github/GoRuleMatch/main&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Coding/Github/GoPoc&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\Github\GoRuleMatch\main" />
+      <recent name="D:\Coding\Github\GoRuleMatch\main\ShermieProxy" />
       <recent name="D:\Coding\Github\GoRuleMatch" />
       <recent name="D:\Coding\Github\GoRuleMatch\main\Core" />
       <recent name="D:\Coding\Github\GoRuleMatch\main\Handle" />
-      <recent name="D:\Coding\Github\GoRuleMatch\Core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Coding\Github\GoRuleMatch\main\Judge" />
       <recent name="D:\Coding\Github\GoRuleMatch\main\Core" />
       <recent name="D:\Coding\Github\GoRuleMatch\main" />
     </key>
@@ -75,14 +79,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main/Core/GetHttpData.go</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/main/ShermieProxy/Core/Certificate.go</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main/Core/GetHttpData.go</url>
-          <line>32</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/main/Core/StartListening.go</url>
+          <line>63</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

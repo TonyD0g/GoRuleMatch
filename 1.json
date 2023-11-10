@@ -1,0 +1,20 @@
+{
+  "Request": {
+    "Method": "GET",
+    "Uri": [
+      "/robots.txt",
+      "/hello.txt"
+    ],
+    "Header": {
+      "Accept-Encoding": "gzip"
+    }
+  },
+  "Response": {
+    "Operation": "OR",
+    "Group": [
+      {
+        "Regexp" : ".*?"
+      }
+    ]
+  }
+}
