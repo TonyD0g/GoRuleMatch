@@ -62,7 +62,7 @@ func ListenBranch(port string, nagle bool, proxy string, to string, network stri
 		// 可以在这里做数据修改
 		resolve(body, response)
 		if Core2.IsExploitSuccessByJson(GlobalVar.PocStruct, response, []byte(GlobalVar.PocStruct.RequestPackage.Body)) {
-			Log.Log.Println("[+] " + response.Request.URL.String() + "\tSuccess! The target may have this vulnerability")
+			Log.Log.Println("[+] " + response.Request.URL.String() + "\tSuccessfully captured")
 		}
 		// 如果正常处理必须返回true，如果不需要将数据返回给客户端，返回false，一般在自己操作conn的时候才会用到
 		return true

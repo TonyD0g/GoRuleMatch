@@ -1,19 +1,11 @@
 {
   "Request": {
-    "Method": "GET",
-    "Uri": [
-      "/robots.txt",
-      "/hello.txt"
-    ],
-    "Header": {
-      "Accept-Encoding": "gzip"
-    }
   },
   "Response": {
     "Operation": "OR",
     "Group": [
       {
-        "Regexp" : ".*?"
+        "Regexp" : "(?s)^(.*?).mhdp640{display:none;}"
       }
     ]
   }

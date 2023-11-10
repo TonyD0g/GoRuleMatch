@@ -1,4 +1,4 @@
-package Input
+package Handle
 
 import (
 	"bufio"

@@ -4,7 +4,6 @@ import (
 	"GoRuleMatch/main/Core"
 	"GoRuleMatch/main/GlobalVar"
 	"GoRuleMatch/main/Handle"
-	"GoRuleMatch/main/Input"
 	"GoRuleMatch/main/Log"
 	Core2 "GoRuleMatch/main/ShermieProxy/Core"
 	"flag"
@@ -16,21 +15,21 @@ import (
 
 func main() {
 	fmt.Println("              _____       _      __  __       _       _     \n             |  __ \\     | |    |  \\/  |     | |     | |    \n   __ _  ___ | |__) |   _| | ___| \\  / | __ _| |_ ___| |__  \n  / _` |/ _ \\|  _  / | | | |/ _ \\ |\\/| |/ _` | __/ __| '_ \\ \n | (_| | (_) | | \\ \\ |_| | |  __/ |  | | (_| | || (__| | | |\n  \\__, |\\___/|_|  \\_\\__,_|_|\\___|_|  |_|\\__,_|\\__\\___|_| |_|\n   __/ |                                                    \n  |___/                                                     ")
-	fmt.Println("基于 Json 、自定义Go脚本的规则匹配验证，可适用于验证本机http流量中是否有符合规则的情况。\nVersion 1.2")
+	fmt.Println("基于 Json 的规则匹配验证，可适用于验证本机http流量中是否有符合规则的情况。\nVersion 1.3")
 
 	args := os.Args
 	if len(args) == 1 {
 		fmt.Println("使用说明:	-ini C:/config.ini\nconfig.ini内容如下:")
 	} else if args[1] != "-ini" {
-		fmt.Println("[-] 参数错误,例子:")
+		fmt.Println("[-] 参数错误,例子:-vul\nD:\\Coding\\Github\\GoRuleMatch\\1.json\n-port\n8080\n-nagle\ntrue\n-certFile\n./cert.crt\n-keyFile\n./cert.key")
 	}
 	inputIniFile := flag.String("ini", ".\\config.ini", "Input the ini file")
 	flag.Parse()
-	config := Input.HandleIni(*inputIniFile)
+	config := Handle.HandleIni(*inputIniFile)
 
 	// Determine whether the number of parameters is correct
 	if !strings.Contains(config["vul"], ".json") {
-		Log.Log.Fatal("[-] 参数错误,例子:")
+		Log.Log.Fatal("[-] 参数错误,例子:-vul\nD:\\Coding\\Github\\GoRuleMatch\\1.json\n-port\n8080\n-nagle\ntrue\n-certFile\n./cert.crt\n-keyFile\n./cert.key")
 	}
 
 	Log.NewLogger().Init()
